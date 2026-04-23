@@ -16,6 +16,40 @@
     />
     <link rel="icon" href="icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("imgFull");
+        const captionText = document.getElementById("caption");
+        const closeBtn = document.getElementsByClassName("close-modal")[0];
+
+        // Select all images inside the articles
+        const images = document.querySelectorAll("article img");
+
+        images.forEach((img) => {
+          img.onclick = function (e) {
+            // Prevent link navigation if the image is inside an <a> tag
+            e.preventDefault();
+
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt || "Project Image";
+          };
+        });
+
+        // Close when clicking (X)
+        closeBtn.onclick = function () {
+          modal.style.display = "none";
+        };
+
+        // Close when clicking anywhere outside the image
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        };
+      });
+    </script>
   </head>
   <body class="is-preload">
     <!-- Nav -->
@@ -35,7 +69,9 @@
       <div class="container">
         <div class="row">
           <div class="col-4 col-5-large col-12-medium">
-            <span class="image fit"><img src="pic00.png" alt="" /></span>
+            <span class="image fit"
+              ><img src="pic00.png" alt="Ship Happens Logo  "
+            /></span>
           </div>
           <div class="col-8 col-7-large col-12-medium">
             <header>
@@ -216,24 +252,48 @@
         <header>
           <h2>Let's talk about our data science methodology.</h2>
           <p>
-            Proin odio consequat sapien vestibulum consequat lorem dolore
-            feugiat.
+            The data science process we followed includes data preprocessing,
+            exploratory data analysis, and machine learning modeling.
           </p>
         </header>
         <div class="row">
           <div class="col-6 col-6-medium col-12-small">
             <article class="box style2">
               <a href="#" class="image featured"
-                ><img src="images/pic02.jpg" alt=""
+                ><img
+                  src="images/preprocess.png"
+                  alt="Python code for data preprocessing."
               /></a>
               <h3><a href="#">Data Preprocessing</a></h3>
-              <p>Ornare nulla proin odio consequat.</p>
+              <p>
+                Removing missing values and cleaning the data. Using pandas for
+                data manipulation.
+              </p>
             </article>
           </div>
           <div class="col-6 col-6-medium col-12-small">
             <article class="box style2">
               <a href="#" class="image featured"
-                ><img src="images/pic01.jpg" alt=""
+                ><img
+                  src="nutshell plot.png"
+                  alt="Average Monthly Total Cargo Traffic for Top 10 Busiest Ports"
+              /></a>
+              <h3><a href="#">Exploratory Data analysis</a></h3>
+              <p>
+                Using various visualization and statistical techniques to
+                understand the data.
+              </p>
+            </article>
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="col-6 col-6-medium col-12-small"
+            style="margin: auto; margin-top: 20px"
+          >
+            <article class="box style2">
+              <a href="#" class="image featured"
+                ><img src="images/pic02.jpg" alt=""
               /></a>
               <h3><a href="#">Machine Learning</a></h3>
               <p>Ornare nulla proin odio consequat.</p>
@@ -251,28 +311,36 @@
       <div class="container">
         <header>
           <h2>Here's what we found out.</h2>
-          <p>
-            Proin odio consequat sapien vestibulum consequat lorem dolore
-            feugiat.
-          </p>
         </header>
         <div class="row">
           <div class="col-6 col-6-medium col-12-small">
             <article class="box style2">
               <a href="#" class="image featured"
-                ><img src="images/question1.png" alt=""
+                ><img
+                  src="images/question1.png"
+                  alt="All shipping ports by total cargo volume from 2019 to 2025"
               /></a>
-              <h3><a href="#">Results</a></h3>
-              <p>Ornare nulla proin odio consequat.</p>
+              <h3><a href="#">Manila has the greatest port activity</a></h3>
+              <p>
+                Looking at total cargo volume from 2019 to 2025 across all
+                ports, Manila far exceeds the other ports.
+              </p>
             </article>
           </div>
           <div class="col-6 col-6-medium col-12-small">
             <article class="box style2">
               <a href="#" class="image featured"
-                ><img src="images/question2.png" alt=""
+                ><img
+                  src="images/question2.png"
+                  alt="Total import and export cargo by month across all ports from 2019 to 2025"
               /></a>
-              <h3><a href="#">Results</a></h3>
-              <p>Ornare nulla proin odio consequat.</p>
+              <h3>
+                <a href="#">Port activity peaks during August</a>
+              </h3>
+              <p>
+                Across all ports, total import and export cargo peaks during
+                August.
+              </p>
             </article>
           </div>
         </div>
@@ -372,6 +440,12 @@
         </footer>
       </div>
     </article>
+
+    <div id="imageModal" class="modal">
+      <span class="close-modal">&times;</span>
+      <img class="modal-content" id="imgFull" />
+      <div id="caption"></div>
+    </div>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
