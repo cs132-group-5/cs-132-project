@@ -1965,6 +1965,13 @@ input, select, textarea {
 			position: static;
 		}
 
+		.box.style3 .image {
+			width: calc(100% + 4em);
+			height: 100%;
+			margin: -2em -2em 2em -2em;
+			position: static;
+		}
+
 		.box p {
 			flex-grow: 1;
 			overflow: hidden;
@@ -2419,6 +2426,12 @@ input, select, textarea {
 
 				.box.style2 {
 					max-width: 32em;
+					margin-left: auto !important;
+					margin-right: auto !important;
+				}
+
+				.box.style3 {
+					max-width: 60em;
 					margin-left: auto !important;
 					margin-right: auto !important;
 				}
