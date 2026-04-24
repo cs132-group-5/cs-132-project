@@ -225,6 +225,9 @@ input, select, textarea {
 			font-size: 1.25em;
 		}
 
+	.bodyp {
+		font-size: 1.25em !important;
+	}
 /* Container */
 
 	.container {
@@ -2331,6 +2334,9 @@ input, select, textarea {
 				margin: 1.5em 0 2em 0;
 			}
 
+			.bodyp {
+				font-size: 1.25em !important;
+			}
 		/* Section/Article */
 
 			section, article {

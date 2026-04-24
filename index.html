@@ -146,10 +146,10 @@
           </div>
         </div>
         <footer>
-          <p>Ready to see the data behind our study?</p>
+          <!-- <p>Ready to see the data behind our study?</p>
           <a href="data_collection.html" class="button large scrolly"
             >Let's take a look at our data</a
-          >
+          > -->
         </footer>
       </div>
     </article>
@@ -159,23 +159,8 @@
       <div class="container">
         <header>
           <h2>We explored PortWatch's daily port activity data.</h2>
-          <p>
-            Detailed estimates of shipping volumes and port calls across the
-            Philippines.
-          </p>
         </header>
         <div class="row">
-          <div class="col-4 col-6-medium col-12-small">
-            <article class="box style2">
-              <a href="#" class="image featured"
-                ><img
-                  src="https://transportgeography.org/wp-content/uploads/Map-World-Maritime-Trade-Routes-1912.png"
-                  alt=""
-              /></a>
-              <h3><a href="#">Topic</a></h3>
-              <p>Philippine Daily Port Activity and Shipment Estimates.</p>
-            </article>
-          </div>
           <div class="col-4 col-6-medium col-12-small">
             <article class="box style2">
               <a
@@ -183,7 +168,7 @@
                 class="image featured"
                 ><img
                   src="https://media.licdn.com/dms/image/v2/D4E05AQGzqZtbpW7IMA/feedshare-thumbnail_720_1280/feedshare-thumbnail_720_1280/0/1704491594043?e=2147483647&v=beta&t=xW2_CfeZ-v1RPySJh66nvRWw51bBucpurrxcvzpzZ8Y"
-                  alt=""
+                  alt="PortWatch is an open-source platform developed by the IMF and the University of Oxford that tracks maritime trade in near real-time. It primarily utilizes Automatic Identification System (AIS) data, which consists of satellite-captured signals from over 95,000 ships worldwide, to create several layers of economic and logistics data."
               /></a>
               <h3>
                 <a
@@ -198,48 +183,64 @@
             <article class="box style2">
               <a href="#" class="image featured"
                 ><img
+                  src="https://transportgeography.org/wp-content/uploads/Map-World-Maritime-Trade-Routes-1912.png"
+                  alt="Portwatch gathers data of daily port activity in 26 Phillippine ports using satellite AIS signals.  "
+              /></a>
+              <h3><a href="#">Daily Port Activity </a></h3>
+              <p>Philippine Daily Port Activity and Shipment Estimates.</p>
+            </article>
+          </div>
+          <div class="col-4 col-6-medium col-12-small">
+            <article class="box style2">
+              <a href="#" class="image featured"
+                ><img
                   src="https://media.istockphoto.com/id/2166810655/photo/blocks-display-the-years-leading-to-2025-symbolizing-business-growth-and-planning-for-the.jpg?s=612x612&w=0&k=20&c=HqUSkzO04EA8U4HHRDREJwthc8P7vAKNQRtzAsiMDBQ="
-                  alt=""
+                  alt="Our dataset contains daily port activity data from January 1, 2019 to November 28, 2025."
               /></a>
               <h3><a href="#">Period</a></h3>
               <p>Daily data from January 1, 2019 to November 28, 2025.</p>
             </article>
           </div>
-          <div class="col-4 col-6-medium col-12-small">
+        </div>
+        <header style="margin-top: 40px; margin-bottom: 20px">
+          <p>Relevant features of the Portwatch data</p>
+        </header>
+        <div class="row" style="justify-content: center !important">
+          <div class="col-5 col-5-medium col-12-small">
             <article class="box style2">
               <a href="#" class="image featured"
                 ><img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0YUCS64pMeLAcgvwR6TywOCCPE2CV5DcWpA&s"
-                  alt=""
+                  src="https://hmcoastguard.uk/sites/default/files/styles/max_2600x2600/public/2023-08/0687_VTS.jpg.webp?itok=QvgDoGKd"
+                  alt='Daily Vessel Traffic (Port Calls) - PortWatch tracks the physical presence of ships at a port on a daily basis. A "port call" is recorded when a vessel enters a predefined geofenced area (the port boundary)'
               /></a>
-              <h3><a href="#">Metrics</a></h3>
-              <p>Port calls, incoming and outgoing shipment volumes.</p>
+              <h3><a href="#">Daily Vessel Traffic</a></h3>
+              <p>
+                Are counted as "port calls" when a vessel enters a predefined
+                geofenced area (the port boundary).
+              </p>
             </article>
           </div>
-          <div class="col-4 col-6-medium col-12-small">
+          <div class="col-5 col-5-medium col-12-small">
             <article class="box style2">
               <a href="#" class="image featured"
                 ><img
                   src="https://i.ytimg.com/vi/wlo9ZpRiFEA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDtvMY-lv4jSpu_RJzWKb5adQl0kQ"
-                  alt=""
+                  alt="Unlike official customs data, which measures trade in dollar value, PortWatch estimates the physical weight of the goods being moved."
               /></a>
-              <h3><a href="#">Scale</a></h3>
-              <p>Volume estimates are provided in metric tons.</p>
-            </article>
-          </div>
-          <div class="col-4 col-6-medium col-12-small">
-            <article class="box style2">
-              <a href="#" class="image featured"
-                ><img
-                  src="https://www.transportevents.com/wp-content/uploads/2014/03/manila2024CA-banner.jpg"
-                  alt=""
-              /></a>
-              <h3><a href="#">Goal</a></h3>
-              <p>Predictive modeling for port-specific shipping activity.</p>
+              <h3><a href="#">Daily Trade Volume Estimates</a></h3>
+              <p>
+                The volume of import and export shipments in each of the ports
+                are estimated in metric tons.
+              </p>
             </article>
           </div>
         </div>
-        <footer></footer>
+        <footer>
+          <p>Do you want to take a look at the dataset?</p>
+          <a href="data_collection.html" class="button large scrolly"
+            >Portwatch Dataset</a
+          >
+        </footer>
       </div>
     </article>
 
@@ -293,13 +294,11 @@
                 ><img src="images/pic02.jpg" alt=""
               /></a>
               <h3><a href="#">Machine Learning</a></h3>
-              <p>Ornare nulla proin odio consequat.</p>
+              <p>[TBD]</p>
             </article>
           </div>
         </div>
-        <footer>
-          <p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
-        </footer>
+        <footer></footer>
       </div>
     </article>
 
@@ -341,13 +340,15 @@
             </article>
           </div>
         </div>
-        <div class="row" style="margin-top: 20px">
-          <h3 style="text-align: justify">
+        <header style="margin-top: 40px; margin-bottom: 20px !important">
+          <p style="text-align: justify">
             We hypothesised that the busiest shipping port in the Philippines is
             Manila, and port activity peaks during the Christmas season
             (November-December) causing shipping delays throughout the country
             because of the higher demand.
-          </h3>
+          </p>
+        </header>
+        <div class="row">
           <div
             class="col-6 col-6-medium col-12-small"
             style="margin: auto; width: 80%"
@@ -374,7 +375,7 @@
         </div>
 
         <footer>
-          <p>Want to learn more? Take a look at our source codes.</p>
+          <p>Want to learn more? Take a look at our source code.</p>
           <a
             href="https://github.com/cs132-group-5/cs-132-project"
             class="button large scrolly"
