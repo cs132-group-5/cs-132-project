@@ -291,10 +291,15 @@
           >
             <article class="box style2">
               <a href="#" class="image featured"
-                ><img src="images/pic02.jpg" alt=""
+                ><img
+                  src="https://www.ibm.com/content/adobe-cms/us/en/think/topics/lstm/jcr:content/root/table_of_contents/body-article-8/image_1582709591.coreimg.png/1765911964452/lstm-architecture.png"
+                  alt="LSTM Architecture"
               /></a>
               <h3><a href="#">Machine Learning</a></h3>
-              <p>[TBD]</p>
+              <p>
+                The modelling will use Long Short-Term Memory (LSTM) networks to
+                capture temporal dependencies in the data.
+              </p>
             </article>
           </div>
         </div>
@@ -380,6 +385,195 @@
             href="https://github.com/cs132-group-5/cs-132-project"
             class="button large scrolly"
             >Github Repo</a
+          >
+        </footer>
+      </div>
+    </article>
+
+    <article id="results" class="wrapper style3">
+      <div class="container">
+        <header>
+          <h2>Machine Learning Modelling</h2>
+        </header>
+        <div class="row">
+          <div class="col-6 col-6-medium col-12-small">
+            <article class="box style2">
+              <a href="#" class="image featured"
+                ><img
+                  src="images/hitrate.png"
+                  alt="Sample hit rate for a given port. It is a hit when the model correctly predicts that the traffic for the day will be greater than the mean"
+              /></a>
+              <h3><a href="#">Model Metrics</a></h3>
+              <p>
+                Predicting the exact port activity is difficult, but our model
+                can predict whether a port will have more than the usual
+                activity.
+              </p>
+            </article>
+          </div>
+          <div class="col-6 col-6-medium col-12-small">
+            <article class="box style2">
+              <a href="#" class="image featured"
+                ><img
+                  src="https://www.ibm.com/content/adobe-cms/us/en/think/topics/lstm/jcr:content/root/table_of_contents/body-article-8/image_1582709591.coreimg.png/1765911964452/lstm-architecture.png"
+                  alt="LSTM architecture diagram"
+              /></a>
+              <h3>
+                <a href="#">Model Architecture</a>
+              </h3>
+              <p>
+                The model uses Long Short-Term Memory (LSTM) networks to capture
+                temporal patterns in the data.
+              </p>
+            </article>
+          </div>
+          <div class="col-6 col-6-medium col-12-small">
+            <article class="box style2">
+              <a href="#" class="image featured"
+                ><img
+                  src="images/layers.png"
+                  alt="Layers of the Tensorflow network"
+              /></a>
+              <h3><a href="#">Model Training</a></h3>
+              <p>
+                The model was developed using tensorflow and trained on the
+                Portwatch dataset. Extra features such as day of the week,
+                holidays, and quarter were inferred to improve model
+                performance.
+              </p>
+            </article>
+          </div>
+          <div class="col-6 col-6-medium col-12-small">
+            <article class="box style2">
+              <a href="#" class="image featured"
+                ><img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpfLQDLP2NhnFveNqpK54TX2ZKvnVUrkc1NnufA5f6UA&s=10"
+                  alt="Total import and export cargo by month across all ports from 2019 to 2025"
+              /></a>
+              <h3>
+                <a href="#">Model Inference</a>
+              </h3>
+              <p>
+                The model uses the last 30 days of data to predict the next
+                day's port activity. The model can predict whether a port will
+                have more than the usual activity, which can help in optimizing
+                shipping schedules.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <header style="margin-top: 40px; margin-bottom: 20px !important">
+          <p style="text-align: justify"></p>
+        </header>
+        <div class="row">
+          <div
+            class="col-6 col-6-medium col-12-small"
+            style="margin: auto; width: 80%"
+          >
+            <article class="box style3">
+              <a href="#" class="image featured"
+                ><img
+                  src="images/sample.png"
+                  alt="Model predictions for the first 100 samples of the data"
+              /></a>
+              <h3>
+                <a href="#">Model Results</a>
+              </h3>
+              <p>
+                The model could theoretically predict the exact traffic of a
+                certain port but this just means that it was able to understand
+                the trends in the data.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <header style="margin-top: 40px; margin-bottom: 20px !important">
+          <p style="text-align: justify"></p>
+        </header>
+        <div class="row">
+          <div
+            class="col-6 col-6-medium col-12-small"
+            style="margin: auto; width: 80%"
+          >
+            <article class="box style3">
+              <a href="#" class="image featured"
+                ><img
+                  src="images/scatter.png"
+                  alt="Actual vs Predicted values for import, export, and port calls of the model for the entire dataset"
+              /></a>
+              <h3>
+                <a href="#">More Results</a>
+              </h3>
+              <p>
+                When looking at the entire dataset, the model is not the most
+                reliable to predict the exact traffic of a certain port. The
+                model had a loss value of
+                <strong>0.0009, 0.0002, and 0.0008</strong> (scaled MSE) for
+                imports, exports, and port calls respectively.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <header style="margin-top: 40px; margin-bottom: 20px !important">
+          <p style="text-align: justify"></p>
+        </header>
+        <div class="row">
+          <div
+            class="col-6 col-6-medium col-12-small"
+            style="margin: auto; width: 80%"
+          >
+            <article class="box style3">
+              <a href="#" class="image featured"
+                ><img
+                  src="images/allhitrate.png"
+                  alt="Hit rate of the model across all ports. A hit is when the model correctly predicts that the traffic for the day will be greater than the mean"
+              /></a>
+              <h3>
+                <a href="#">Model Hit Rate</a>
+              </h3>
+              <p>
+                The average model hit rate across all ports is around
+                <strong>70-80%</strong>, which means that the model can predict
+                whether a port will have more than the usual activity with
+                reasonable accuracy.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <header style="margin-top: 40px; margin-bottom: 20px !important">
+          <h3>Limitations and Recommendations</h3>
+          <p style="text-align: justify">
+            &emsp; Even though the model yielded a low loss value across all the
+            predictive outcomes, this was merely caused by the large amounts of
+            data. Another reason for the low loss values is that a lot of the
+            ports in the data have little to no activity the entire time. The
+            model was correctly able to determine which ports exhibited this
+            behavior. The erratic behavior of data was sometimes captured by the
+            model, when the behavior is sustained for a long time. For short
+            periods and of spikes in the activity, the model had a difficult
+            time of capturing it.
+            <br /><br />
+            &emsp; A bit of feature engineering was done to improve the model's
+            performance, such as inferring extra features like day of the week,
+            holidays, and quarter. However, there are still many other features
+            that can be inferred from the data, such as weather conditions,
+            economic indicators, and global events, which can further improve
+            the model's performance. The model can also be improved by using
+            more advanced architectures such as attention mechanisms or
+            transformer models, which can better capture the temporal
+            dependencies in the data.
+          </p>
+        </header>
+
+        <footer>
+          <a
+            href="https://github.com/cs132-group-5/cs-132-project/model_hitrate.ipynb"
+            class="button large scrolly"
+            >Model Training Code</a
           >
         </footer>
       </div>
