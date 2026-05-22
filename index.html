@@ -345,105 +345,426 @@
             </article>
           </div>
         </div>
+        <div class="row">
+          <div
+            class="col-6 col-6-medium col-12-small"
+            style="margin: auto; width: 80%; margin-top: 40px"
+          >
+            <article class="box style3">
+              <a href="#" class="image featured"
+                ><img
+                  src="nutshell plot.png"
+                  alt="Total import and export cargo by month across all ports from 2019 to 2025"
+              /></a>
+              <h3>
+                <a href="#"
+                  >Port activity is greatest in Manila during the month of
+                  August</a
+                >
+              </h3>
+              <p>
+                Across all ports in the Phillippines, Manila has the greatest
+                port activity, and port activity peaks during the month of
+                August, not November-December as we hypothesized.
+              </p>
+            </article>
+          </div>
+        </div>
         <!-- Hypothesis Testing Modal Trigger Button -->
-        <div class="row" style="margin-top: 40px; margin-bottom: 20px; justify-content:center;">
-          <button id="hypothesisBtn" style="background: #2b3a55; color: #fff; border: none; border-radius: 12px; padding: 1em 2.5em; font-size: 1.3em; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.08); cursor: pointer; transition: background 0.2s;">View Hypothesis Testing Results</button>
+        <div
+          class="row"
+          style="margin-top: 40px; margin-bottom: 20px; justify-content: center"
+        >
+          <button
+            id="hypothesisBtn"
+            style="
+              background: #2b3a55;
+              color: #fff;
+              border: none;
+              border-radius: 12px;
+              padding: 1em 2.5em;
+              font-size: 1.3em;
+              font-weight: 600;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+              cursor: pointer;
+              transition: background 0.2s;
+            "
+          >
+            View Hypothesis Testing Results
+          </button>
         </div>
 
         <!-- Hypothesis Testing Modal Popup -->
-        <div id="hypothesisModal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100vw; height:100vh; overflow:auto; background:rgba(59, 92, 126, 0.45);">
-          <div style="background:#fff; margin: 5% auto; padding: 2.5em 2em; border-radius: 18px; max-width: 900px; box-shadow: 0 4px 32px rgba(0,0,0,0.18); position:relative;">
-            <span id="closeHypothesisModal" style="position:absolute; top:18px; right:28px; font-size:2.2em; color:#2b3a55; cursor:pointer; font-weight:700;">&times;</span>
-            <h3 style="text-align:center; color:#3b546b; margin-bottom: 0.7em;">Hypothesis Testing Results</h3>
+        <div
+          id="hypothesisModal"
+          style="
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: auto;
+            background: rgba(59, 92, 126, 0.45);
+          "
+        >
+          <div
+            style="
+              background: #fff;
+              margin: 5% auto;
+              padding: 2.5em 2em;
+              border-radius: 18px;
+              max-width: 900px;
+              box-shadow: 0 4px 32px rgba(0, 0, 0, 0.18);
+              position: relative;
+            "
+          >
+            <span
+              id="closeHypothesisModal"
+              style="
+                position: absolute;
+                top: 18px;
+                right: 28px;
+                font-size: 2.2em;
+                color: #2b3a55;
+                cursor: pointer;
+                font-weight: 700;
+              "
+              >&times;</span
+            >
+            <h3
+              style="text-align: center; color: #3b546b; margin-bottom: 0.7em"
+            >
+              Hypothesis Testing Results
+            </h3>
             <!-- Hypothesis Statement -->
-            <div style="background:#f6f8fa; border-radius: 10px; padding: 1.2em 1.5em; margin-bottom: 1.2em; border-left: 6px solid #2b3a55; text-align:justify;">
+            <div
+              style="
+                background: #f6f8fa;
+                border-radius: 10px;
+                padding: 1.2em 1.5em;
+                margin-bottom: 1.2em;
+                border-left: 6px solid #2b3a55;
+                text-align: justify;
+              "
+            >
               <strong>Hypotheses:</strong>
-              <ol style="margin-top:0.7em; margin-bottom:0.2em; padding-left:1.5em;">
-                <li>The busiest shipping port in the Philippines is <b>Manila</b>.</li>
-                <li>Port activity peaks during the <b>Christmas season (November-December)</b>, causing shipping delays throughout the country because of higher demand.</li>
+              <ol
+                style="
+                  margin-top: 0.7em;
+                  margin-bottom: 0.2em;
+                  padding-left: 1.5em;
+                "
+              >
+                <li>
+                  The busiest shipping port in the Philippines is <b>Manila</b>.
+                </li>
+                <li>
+                  Port activity peaks during the
+                  <b>Christmas season (November-December)</b>, causing shipping
+                  delays throughout the country because of higher demand.
+                </li>
               </ol>
             </div>
             <!-- Test Description Paragraph -->
-            <p style="margin-top:0; margin-bottom:1.5em; text-align:justify;">We used the <b>Kruskal-Wallis Test</b> to check for significant differences in the variance of more than three independent groups—specifically, port activity across different <b>months</b> and <b>ports</b>. This non-parametric test is suitable for comparing multiple groups when the assumptions of ANOVA are not met.</p>
+            <p style="margin-top: 0; margin-bottom: 1.5em; text-align: justify">
+              We used the <b>Kruskal-Wallis Test</b> to check for significant
+              differences in the variance of more than three independent
+              groups—specifically, port activity across different
+              <b>months</b> and <b>ports</b>. This non-parametric test is
+              suitable for comparing multiple groups when the assumptions of
+              ANOVA are not met.
+            </p>
             <!-- Results Tables -->
-            <div style="display: flex; flex-wrap: wrap; gap: 4em; justify-content: center; align-items: flex-start;">
-              <div style="flex:1; min-width: 260px; max-width: 340px; display:flex; flex-direction:column; align-items:center;">
-                <table style="background:#efeff1; border-radius: 10px; border-collapse:collapse; border: 1.5px solid #919191; text-align:left; width:100%; max-width:320px;">
-                  <caption style="caption-side:top; font-weight:600; color:#3b546b; margin-bottom:0.5em; text-align:center;">Monthly Port Activity</caption>
+            <div
+              style="
+                display: flex;
+                flex-wrap: wrap;
+                gap: 4em;
+                justify-content: center;
+                align-items: flex-start;
+              "
+            >
+              <div
+                style="
+                  flex: 1;
+                  min-width: 260px;
+                  max-width: 340px;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <table
+                  style="
+                    background: #efeff1;
+                    border-radius: 10px;
+                    border-collapse: collapse;
+                    border: 1.5px solid #919191;
+                    text-align: left;
+                    width: 100%;
+                    max-width: 320px;
+                  "
+                >
+                  <caption
+                    style="
+                      caption-side: top;
+                      font-weight: 600;
+                      color: #3b546b;
+                      margin-bottom: 0.5em;
+                      text-align: center;
+                    "
+                  >
+                    Monthly Port Activity
+                  </caption>
                   <tbody>
-                  <tr style="border-bottom:1px solid #b0b0b0;">
-                    <td style="padding:0.5em 1em; border-right:1px solid #b0b0b0; width:55%;">Test</td>
-                    <td style="padding:0.3em 0.5em; font-size:0.97em; white-space:nowrap;">Kruskal-Wallis H-test</td>
-                  </tr>
-                  <tr style="border-bottom:1px solid #b0b0b0;"><td style="padding:0.5em 1em; border-right:1px solid #919191;">H-statistic</td><td style="padding:0.5em 1em;">0.6930</td></tr>
-                  <tr style="border-bottom:1px solid #b0b0b0;"><td style="padding:0.5em 1em; border-right:1px solid #919191;">p-value</td><td style="padding:0.5em 1em;">0.9999</td></tr>
-                  <tr><td style="padding:0.1em 0.3em; border-right:1px solid #919191;">Significance Level</td><td style="padding:0.5em 1em;">0.05</td></tr>
-                </tbody>
-              </table>
+                    <tr style="border-bottom: 1px solid #b0b0b0">
+                      <td
+                        style="
+                          padding: 0.5em 1em;
+                          border-right: 1px solid #b0b0b0;
+                          width: 55%;
+                        "
+                      >
+                        Test
+                      </td>
+                      <td
+                        style="
+                          padding: 0.3em 0.5em;
+                          font-size: 0.97em;
+                          white-space: nowrap;
+                        "
+                      >
+                        Kruskal-Wallis H-test
+                      </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #b0b0b0">
+                      <td
+                        style="
+                          padding: 0.5em 1em;
+                          border-right: 1px solid #919191;
+                        "
+                      >
+                        H-statistic
+                      </td>
+                      <td style="padding: 0.5em 1em">0.6930</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #b0b0b0">
+                      <td
+                        style="
+                          padding: 0.5em 1em;
+                          border-right: 1px solid #919191;
+                        "
+                      >
+                        p-value
+                      </td>
+                      <td style="padding: 0.5em 1em">0.9999</td>
+                    </tr>
+                    <tr>
+                      <td
+                        style="
+                          padding: 0.1em 0.3em;
+                          border-right: 1px solid #919191;
+                        "
+                      >
+                        Significance Level
+                      </td>
+                      <td style="padding: 0.5em 1em">0.05</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <div style="flex:1; min-width: 260px; max-width: 340px; display:flex; flex-direction:column; align-items:center;">
-                <table style="background:#efeff1; border-radius: 10px; border-collapse:collapse; border: 1.5px solid #919191; text-align:left; width:100%; max-width:320px;">
-                  <caption style="caption-side:top; font-weight:600; color:#3b546b; margin-bottom:0.5em; text-align:center;">Total Cargo Across Ports</caption>
+              <div
+                style="
+                  flex: 1;
+                  min-width: 260px;
+                  max-width: 340px;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <table
+                  style="
+                    background: #efeff1;
+                    border-radius: 10px;
+                    border-collapse: collapse;
+                    border: 1.5px solid #919191;
+                    text-align: left;
+                    width: 100%;
+                    max-width: 320px;
+                  "
+                >
+                  <caption
+                    style="
+                      caption-side: top;
+                      font-weight: 600;
+                      color: #3b546b;
+                      margin-bottom: 0.5em;
+                      text-align: center;
+                    "
+                  >
+                    Total Cargo Across Ports
+                  </caption>
                   <tbody>
-                  <tr style="border-bottom:1px solid #b0b0b0;">
-                    <td style="padding:0.5em 1em; border-right:1px solid #919191; width:55%;">Test</td>
-                    <td style="padding:0.3em 0.5em; font-size:0.97em; white-space:nowrap;">Kruskal-Wallis H-test</td>
-                  </tr>
-                  <tr style="border-bottom:1px solid #b0b0b0;"><td style="padding:0.5em 1em; border-right:1px solid #919191;">H-statistic</td><td style="padding:0.5em 1em;">300.0777</td></tr>
-                  <tr style="border-bottom:1px solid #b0b0b0;"><td style="padding:0.5em 1em; border-right:1px solid #919191;">p-value</td><td style="padding:0.5em 1em;">3.6543×10<sup>−49</sup></td></tr>
-                  <tr><td style="padding:0.1em 0.3em; border-right:1px solid #919191;">Significance Level</td><td style="padding:0.5em 1em;">0.05</td></tr>
-                </tbody>
-              </table>
-            </div>
+                    <tr style="border-bottom: 1px solid #b0b0b0">
+                      <td
+                        style="
+                          padding: 0.5em 1em;
+                          border-right: 1px solid #919191;
+                          width: 55%;
+                        "
+                      >
+                        Test
+                      </td>
+                      <td
+                        style="
+                          padding: 0.3em 0.5em;
+                          font-size: 0.97em;
+                          white-space: nowrap;
+                        "
+                      >
+                        Kruskal-Wallis H-test
+                      </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #b0b0b0">
+                      <td
+                        style="
+                          padding: 0.5em 1em;
+                          border-right: 1px solid #919191;
+                        "
+                      >
+                        H-statistic
+                      </td>
+                      <td style="padding: 0.5em 1em">300.0777</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #b0b0b0">
+                      <td
+                        style="
+                          padding: 0.5em 1em;
+                          border-right: 1px solid #919191;
+                        "
+                      >
+                        p-value
+                      </td>
+                      <td style="padding: 0.5em 1em">
+                        3.6543×10<sup>−49</sup>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        style="
+                          padding: 0.1em 0.3em;
+                          border-right: 1px solid #919191;
+                        "
+                      >
+                        Significance Level
+                      </td>
+                      <td style="padding: 0.5em 1em">0.05</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <!-- Interpretation/Discussion -->
-            <div style="text-align:justify; margin-top: 0;">
-              <div style="display: flex; flex-wrap: wrap; gap: 1em; justify-content: center; align-items: flex-start;">
-                <div style="flex:1; min-width: 260px; max-width: 340px; margin: 0 auto;">
-                  <p style="margin-bottom:0.5em;">Since the p-value is much greater than 0.05, there is <span style="font-weight:bold;">no significant difference</span> in port activity across the months.</p>
-                  <p style="margin-bottom:0.5em;">The hypothesis that December is the busiest month for ports is <span style="font-weight:bold;">not supported</span> and is <span style="text-decoration: underline;">rejected</span>.</p>
+            <div style="text-align: justify; margin-top: 0">
+              <div
+                style="
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 1em;
+                  justify-content: center;
+                  align-items: flex-start;
+                "
+              >
+                <div
+                  style="
+                    flex: 1;
+                    min-width: 260px;
+                    max-width: 340px;
+                    margin: 0 auto;
+                  "
+                >
+                  <p style="margin-bottom: 0.5em">
+                    Since the p-value is much greater than 0.05, there is
+                    <span style="font-weight: bold"
+                      >no significant difference</span
+                    >
+                    in port activity across the months.
+                  </p>
+                  <p style="margin-bottom: 0.5em">
+                    The hypothesis that December is the busiest month for ports
+                    is <span style="font-weight: bold">not supported</span> and
+                    is <span style="text-decoration: underline">rejected</span>.
+                  </p>
                 </div>
-                <div style="flex:1; min-width: 260px; max-width: 340px; margin: 0 auto;">
-                  <p style="margin-bottom:0.5em;">Since the p-value is vastly less than 0.05, there is a <span style="font-weight:bold;">highly significant difference</span> in total cargo activity across different ports.</p>
-                  <p style="margin-bottom:0.5em;">The hypothesis that Manila Port is the busiest port is <span style="font-weight:bold;">supported</span> and is <span style="text-decoration: underline;">not rejected</span>.</p>
+                <div
+                  style="
+                    flex: 1;
+                    min-width: 260px;
+                    max-width: 340px;
+                    margin: 0 auto;
+                  "
+                >
+                  <p style="margin-bottom: 0.5em">
+                    Since the p-value is vastly less than 0.05, there is a
+                    <span style="font-weight: bold"
+                      >highly significant difference</span
+                    >
+                    in total cargo activity across different ports.
+                  </p>
+                  <p style="margin-bottom: 0.5em">
+                    The hypothesis that Manila Port is the busiest port is
+                    <span style="font-weight: bold">supported</span> and is
+                    <span style="text-decoration: underline">not rejected</span
+                    >.
+                  </p>
                 </div>
               </div>
-              <p style="margin-top:1.5em;">
-                To relate this to the visual results, where August is the busiest month for ports, this suggests that any increased activity in August is not universal, and not enough to make it stand out from the rest when grouped by month. Instead, this may be due to the significantly greater volume of cargo from Manila Port that caused the total monthly cargo across all ports to be greatest in August.
+              <p style="margin-top: 1.5em">
+                To relate this to the visual results, where August is the
+                busiest month for ports, this suggests that any increased
+                activity in August is not universal, and not enough to make it
+                stand out from the rest when grouped by month. Instead, this may
+                be due to the significantly greater volume of cargo from Manila
+                Port that caused the total monthly cargo across all ports to be
+                greatest in August.
               </p>
             </div>
           </div>
         </div>
       </div>
 
-    <script>
-      // Hypothesis Testing Modal Logic
-      document.addEventListener("DOMContentLoaded", function () {
-        var modal = document.getElementById("hypothesisModal");
-        var btn = document.getElementById("hypothesisBtn");
-        var span = document.getElementById("closeHypothesisModal");
-        if (btn && modal && span) {
-          btn.onclick = function () {
-            modal.style.display = "block";
-          };
-          span.onclick = function () {
-            modal.style.display = "none";
-          };
-          window.onclick = function (event) {
-            if (event.target == modal) {
+      <script>
+        // Hypothesis Testing Modal Logic
+        document.addEventListener("DOMContentLoaded", function () {
+          var modal = document.getElementById("hypothesisModal");
+          var btn = document.getElementById("hypothesisBtn");
+          var span = document.getElementById("closeHypothesisModal");
+          if (btn && modal && span) {
+            btn.onclick = function () {
+              modal.style.display = "block";
+            };
+            span.onclick = function () {
               modal.style.display = "none";
-            }
-          };
-        }
-      });
-    </script>
+            };
+            window.onclick = function (event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            };
+          }
+        });
+      </script>
 
       <footer>
         <p>Want to learn more? Take a look at our source code.</p>
         <a
           href="https://github.com/cs132-group-5/cs-132-project"
           class="button large scrolly"
-        >Github Repo</a>
+          >Github Repo</a
+        >
       </footer>
     </article>
 
